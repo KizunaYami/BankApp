@@ -1,0 +1,40 @@
+login{
+    campo cpf
+    campo senha
+    bt login
+}
+dashboard{
+    nome
+    saldo
+    modulos{
+        modulo conta{
+            deposito
+            retirada
+            extrato
+        }
+        modulo pix{
+            cadastro de chave
+            listagem de chaves
+            enviar pix
+            favoritos
+        }
+    }
+}
+repository{
+    tabela usuario{
+        id
+        nome
+        cpf
+        senha
+        saldo
+    }
+    tabela extrato{
+        id_fk
+        log
+    }
+    tabela chaves{
+        id_fk
+        chave
+        usos
+    }
+}
