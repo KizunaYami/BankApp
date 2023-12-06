@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
@@ -20,8 +21,22 @@ public class Conta extends AppCompatActivity {
         setContentView(R.layout.activity_conta);
         repository = new Repository(this);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         TextView textView = findViewById(R.id.idTextSaldo);
         textView.setText(""+repository.getSaldo());
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
     public void onClickDepositar(View view) {

@@ -3,6 +3,7 @@ package com.infinitehorizon.mubank.moduloPix;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -22,6 +23,20 @@ public class CadastrarChaves extends AppCompatActivity {
         setContentView(R.layout.activity_cadastrar_chaves);
         rawChave = findViewById(R.id.idEditTxtCadastroChave);
         repository = new Repository(this);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
     public void onClickCadastrar(View view) {

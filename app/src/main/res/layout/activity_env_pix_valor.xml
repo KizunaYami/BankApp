@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    style="@style/tela"
     tools:context=".moduloPix.EnvPixValor">
 
     <LinearLayout
@@ -17,19 +18,23 @@
 
         <TextView
             android:id="@+id/textView6"
+            style="@style/texto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Valor a ser enviado?" />
 
         <EditText
             android:id="@+id/idEditEnvValor"
+            style="@style/caixa"
+            android:background="@drawable/edt_background"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:ems="10"
             android:inputType="number|numberDecimal|numberSigned" />
 
         <Button
             android:id="@+id/button11"
+            style="@style/botao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="onClickEnviar"

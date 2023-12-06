@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 public class Repository extends SQLiteOpenHelper {
     private static final String NOME_DB = "conta";
-    private static final int VERSION = 6;
+    private static final int VERSION = 7;
 
     public Repository(@Nullable Context context) {
         super(context, NOME_DB, null, VERSION);
@@ -55,7 +55,7 @@ public class Repository extends SQLiteOpenHelper {
                 ")";
         sqLiteDatabase.execSQL(sqlChaves);
 
-        String sqlAdd = "INSERT INTO `usuario`(`id`, `nome`, `cpf`, `senha`, `saldo`) VALUES ('1','Alisson','42','123','2100')";
+        String sqlAdd = "INSERT INTO `usuario`(`id`, `nome`, `cpf`, `senha`, `saldo`) VALUES ('1','Camille','12345678910','admin123','2100')";
         sqLiteDatabase.execSQL(sqlAdd);
     }
 

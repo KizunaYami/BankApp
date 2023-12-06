@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    style="@style/tela"
     tools:context=".Dashboard">
 
     <LinearLayout
@@ -18,11 +19,11 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="54dp"
-            android:background="#002AFF"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/idTextDash"
+                style="@style/texto"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="bottom"
@@ -33,11 +34,11 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:background="#0055FF"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/idText"
+                style="@style/texto"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:gravity="left|center_vertical"
@@ -46,6 +47,7 @@
 
             <TextView
                 android:id="@+id/idTextValor"
+                style="@style/texto"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:text="TextView"
@@ -54,24 +56,24 @@
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="97dp"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/idBtConta"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                style="@style/botao"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_weight="1"
-                android:background="@drawable/custon_bt"
                 android:onClick="onClickConta"
                 android:text="Conta" />
 
             <Button
                 android:id="@+id/idBtPix"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                style="@style/botao"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_weight="1"
-                android:background="@drawable/custon_bt"
                 android:onClick="onClickPix"
                 android:text="Pix" />
         </LinearLayout>

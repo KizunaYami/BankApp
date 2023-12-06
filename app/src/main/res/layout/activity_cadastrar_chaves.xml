@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    style="@style/tela"
     tools:context=".moduloPix.CadastrarChaves">
 
     <LinearLayout
@@ -17,20 +18,24 @@
 
         <TextView
             android:id="@+id/textView4"
+            style="@style/texto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Cadastre a sua chave" />
 
         <EditText
             android:id="@+id/idEditTxtCadastroChave"
+            style="@style/caixa"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
+            android:background="@drawable/edt_background"
             android:ems="10"
             android:hint="Telefone e CPF"
             android:inputType="number" />
 
         <Button
             android:id="@+id/button9"
+            style="@style/botao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="onClickCadastrar"
@@ -38,6 +43,7 @@
 
         <Button
             android:id="@+id/idBtRevomeChave"
+            style="@style/botao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="onClickRemoveChave"

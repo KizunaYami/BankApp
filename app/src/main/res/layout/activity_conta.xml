@@ -4,19 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/custon_bt"
+    style="@style/tela"
     tools:context=".moduloConta.Conta">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/textView"
+            style="@style/texto"
             android:layout_width="match_parent"
             android:layout_height="52dp"
             android:gravity="bottom|left"
@@ -25,6 +27,7 @@
 
         <TextView
             android:id="@+id/idTextSaldo"
+            style="@style/texto"
             android:layout_width="match_parent"
             android:layout_height="68dp"
             android:gravity="left|center_vertical"
@@ -32,34 +35,34 @@
             android:textSize="24sp" />
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="98dp"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/button"
-                android:layout_width="wrap_content"
+                style="@style/botao"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/custon_bt"
                 android:onClick="onClickDepositar"
                 android:text="Depositar" />
 
             <Button
                 android:id="@+id/button2"
-                android:layout_width="wrap_content"
+                style="@style/botao"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/custon_bt"
                 android:onClick="onClickRetirar"
                 android:text="Retirada" />
 
             <Button
                 android:id="@+id/button3"
-                android:layout_width="wrap_content"
+                style="@style/botao"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/custon_bt"
                 android:onClick="onClickExtrato"
                 android:text="Extrato" />
 

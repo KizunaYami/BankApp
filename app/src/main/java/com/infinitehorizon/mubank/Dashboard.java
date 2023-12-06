@@ -1,9 +1,11 @@
 package com.infinitehorizon.mubank;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,10 +22,24 @@ public class Dashboard extends AppCompatActivity {
         setContentView(R.layout.activity_dashboard);
         repository = new Repository(this);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         TextView name = findViewById(R.id.idTextDash);
         name.setText("Olá, "+repository.getNome());
         TextView textValor = findViewById(R.id.idTextValor);
         textValor.setText(""+repository.getSaldo());
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
     @Override

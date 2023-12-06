@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    style="@style/tela"
     tools:context=".moduloPix.EnviarPix">
 
     <LinearLayout
@@ -17,19 +18,23 @@
 
         <TextView
             android:id="@+id/textView7"
+            style="@style/texto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Para quem deseja enviar?" />
 
         <EditText
             android:id="@+id/idEditEnvChav"
+            style="@style/caixa"
+            android:background="@drawable/edt_background"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:ems="10"
             android:inputType="number" />
 
         <Button
             android:id="@+id/button10"
+            style="@style/botao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="onClickEnviarPix"
